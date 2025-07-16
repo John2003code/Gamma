@@ -1,4 +1,3 @@
-#include<stdio.h>
 #include "vec2.h"
 
 float v_dot(vec2 v1, vec2 v2){
