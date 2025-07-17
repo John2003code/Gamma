@@ -1,6 +1,6 @@
 #ifndef VEC2_H
 #define VEC2_H
-
+#include<math.h>
 // vector for 2d is defined here
 // so if we declare vectoe 2d it will be:
 //         vec2 vec_name = {2.1,23.45};

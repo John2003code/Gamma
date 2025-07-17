@@ -1,6 +1,6 @@
 #ifndef PHYSICSWORLD_H
 #define PHYSICSWORLD_H
-#include "../Objects/rigidBody.h"
+#include "../objects/rigidBody.h"
 #include<stdlib.h>
 
 

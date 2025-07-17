@@ -1,4 +1,5 @@
-#include "euler.h"
+#include "../../include/integrators/euler.h"
+
 
 void integrateEulerWithBody(rgdbdy2d* rb, float dt){
     if(!rb->is_r2_stationary){

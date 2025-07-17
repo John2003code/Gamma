@@ -1,7 +1,7 @@
 #ifndef EULER_H
 #define EULER_H
 
-#include "../Objects/rigidBody.h"
+#include "../../include/objects/rigidBody.h"
 
 // dt here is the time for one frame
 // so for example if a machine is running 30fps that means-->

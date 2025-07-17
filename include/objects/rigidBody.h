@@ -1,7 +1,7 @@
 #ifndef RIGIDBODY_H
 #define RIGIDBODY_H
 
-#include "../Core/vec2.h"
+#include "../core/vec2.h"
 
 // rigidBody2d is the struct for defining basic body2d it can be box or 
 // circle
@@ -21,7 +21,7 @@ typedef struct rigidBody2d
 
 
 //API
-rgdbdy2d createRigidBody2d(vec2 pos, float mass, int is_static);
+rgdbdy2d* createRigidBody2d(vec2 pos, float mass, int is_static);
 void rigidBody2dApplyForce(rgdbdy2d* rb, vec2 new_force);
 void rigidBody2dClearForce(rgdbdy2d* rb);
 

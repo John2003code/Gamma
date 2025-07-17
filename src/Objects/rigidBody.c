@@ -1,4 +1,4 @@
-#include "rigidBody.h"
+#include "../../include/objects/rigidBody.h"
 
 rgdbdy2d* createRigidBody2d(vec2 pos, float mass, int is_static){
     rgdbdy2d* rb;

@@ -1,5 +1,5 @@
-#include "vec2.h"
-#include<math.h>
+#include "../../include/core/vec2.h"
+
 
 float v_dot(vec2 v1, vec2 v2){
     return (v1.x * v2.x + v1.y * v2.y);
