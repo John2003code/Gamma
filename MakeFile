@@ -1,0 +1,28 @@
+# -------- Variables --------
+CC = gcc
+CFLAGS = -Wall -Wextra -std=c99 -I./src
+SRC_DIR = src
+OBJ_DIR = build
+
+# Recursively get all .c files
+SOURCES := $(shell find $(SRC_DIR) -name '*.c')
+OBJECTS := $(patsubst $(SRC_DIR)/%.c,$(OBJ_DIR)/%.o,$(SOURCES))
+
+TARGET = physics_engine_demo
+
+# -------- Rules --------
+all: $(TARGET)
+
+# Linking
+$(TARGET): $(OBJECTS)
+	$(CC) $(CFLAGS) -o $@ $^
+
+# Compiling
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
+	@mkdir -p $(dir $@)
+	$(CC) $(CFLAGS) -c $< -o $@
+
+clean:
+	rm -rf $(OBJ_DIR) $(TARGET)
+
+.PHONY: all clean
