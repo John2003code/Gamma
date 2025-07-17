@@ -7,8 +7,8 @@
 typedef struct 
 {
     rgdbdy2d** bodies2d;
-    size_t count;
-    size_t capacity;
+    int count;
+    int capacity;
 }physicsWorld;
 
 void startPhysicsWorld2d(physicsWorld* world);

@@ -1,7 +1,7 @@
 #include "../../include/objects/rigidBody.h"
 
 rgdbdy2d* createRigidBody2d(vec2 pos, float mass, int is_static){
-    rgdbdy2d* rb;
+    rgdbdy2d* rb= malloc(sizeof(rgdbdy2d));
     rb->r2_pos = pos;
     rb->r2_mass = mass;
     rb->is_r2_stationary = is_static;

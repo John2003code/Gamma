@@ -2,7 +2,7 @@
 #define RIGIDBODY_H
 
 #include "../core/vec2.h"
-
+#include<stdlib.h>
 // rigidBody2d is the struct for defining basic body2d it can be box or 
 // circle
 typedef struct rigidBody2d

@@ -1,6 +1,6 @@
-#include "../Objects/rigidBody.h"
-#include "../Integrators/euler.h"
-#include "physicsWorld.h"
+#include "../../include/objects/rigidBody.h"
+#include "../../include/integrators/euler.h"
+#include "../../include/physics/physicsWorld.h"
 
 void startPhysicsWorld2d(physicsWorld* world){
     world->capacity = 10;
