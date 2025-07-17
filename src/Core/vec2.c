@@ -1,4 +1,5 @@
 #include "vec2.h"
+#include<math.h>
 
 float v_dot(vec2 v1, vec2 v2){
     return (v1.x * v2.x + v1.y * v2.y);
@@ -9,11 +10,11 @@ float v_cross(vec2 v1, vec2 v2){
 }
 
 vec2 v_add(vec2 v1, vec2 v2){
-    return (vec2){v1.x+v2.x, v1.y+v2.y};
+    return (vec2){v1.x + v2.x, v1.y + v2.y};
     
 }
 vec2 v_sub(vec2 v1, vec2 v2){
-    return (vec2){v1.x-v2.x, v1.y-v2.y};
+    return (vec2){v1.x - v2.x, v1.y - v2.y};
 }
 
 vec2 v_scalar_mul(vec2 v, float t){
@@ -25,7 +26,7 @@ vec2 v_scalar_div(vec2 v, float t){
 }
 
 float v_length(vec2 v){
-    return (v.x * v.y + v.y *v.y);
+    return sqrtf(v.x * v.y + v.y * v.y);
 }
 vec2 v_normalize(vec2 v){
     float len= v_length(v);
