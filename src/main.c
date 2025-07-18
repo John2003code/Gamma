@@ -1,6 +1,6 @@
 #include<stdio.h>
 
 int main(){
-    printf("ver 0.0.1 is running....\n");
+    printf("if this message is showing then engine is running😊👍....\n");
     return 0;
 }
