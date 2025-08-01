@@ -1,7 +1,12 @@
 #pragma once
+#include<iostream>
 
 class Vec3{
     public:
+    Vec3()
+        :x(0),y(0),z(0) 
+        {}
+
     Vec3(float x, float y, float z)
         :x(x),y(y),z(z)
         {}
@@ -15,14 +20,14 @@ class Vec3{
     float getY(){return this->y;}
     float getZ(){return this->z;}
 
-    //different methods
-    Vec3 v_add(Vec3 v1, Vec3 v2);
-    Vec3 v_sub(Vec3 v1, Vec3 v2);
-    float v_dot(Vec3 v1, Vec3 v2);
-    Vec3 v_cross(Vec3 v1, Vec3 v2);
-    Vec3 v_scalar_div(Vec3 v1, float x);
-    float v_length(Vec3 v);
-    Vec3 v_normalization(Vec3 v);
+    //different vector methods
+    Vec3 operator+(const Vec3& v) const;
+    Vec3 operator-(const Vec3& v) const;
+    float v_dot(const Vec3& v) const;
+    Vec3 v_cross(const Vec3& v) const;
+    Vec3 v_scalar_mul(const float x) const;
+    float v_length() const;
+    Vec3 v_normalization() const;
 
     //destructor;
     ~Vec3(){};

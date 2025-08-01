@@ -3,33 +3,33 @@
 
 
 
-Vec3 Vec3::v_add(Vec3 v1, Vec3 v2) {
-    return Vec3(v1.x+v2.x, v1.y+v2.y, v1.z+v2.z);
+Vec3 Vec3::operator+(const Vec3& v) const{
+    return Vec3(x+v.x, y+v.y, z+v.z);
 }
 
-Vec3 Vec3::v_sub(Vec3 v1, Vec3 v2) {
-    return Vec3(v1.x-v2.x, v1.y-v2.y, v1.z-v2.z);
+Vec3 Vec3::operator-(const Vec3& v) const{
+    return Vec3(x-v.x, y-v.y, z-v.z);
 }
 
-float Vec3::v_dot(Vec3 v1, Vec3 v2){
-    return (v1.x*v2.x + v1.y*v2.y + v1.z*v2.z);
+float Vec3::v_dot(const Vec3& v) const{
+    return (x*v.x + y*v.y + z*v.z);
 }
 
-Vec3 Vec3::v_cross(Vec3 v1, Vec3 v2){
-    return Vec3(v1.y*v2.z - v1.z*v2.y, v1.z*v2.x - v1.x*v2.z, v1.x*v2.y - v1.y*v2.x);
+Vec3 Vec3::v_cross(const Vec3& v) const{
+    return Vec3(y*v.z - z*v.y, z*v.x - x*v.z, x*v.y - y*v.x);
 }
 
-Vec3 Vec3::v_scalar_div(Vec3 v, float x){
-    return Vec3(x*v.x, x*v.y, x*v.z);
+Vec3 Vec3::v_scalar_mul(const float val) const{
+    return Vec3(val*x, val*y, val*z);
 }
 
-float Vec3::v_length(Vec3 v){
-    return (sqrt(pow(v.x,2)+ pow(v.y,2)+ pow(v.z,3)));
+float Vec3::v_length() const{
+    return (sqrt(x*x + y*y + z*z));
 }
 
-Vec3 Vec3::v_normalization(Vec3 v){
-    float len = Vec3::v_length(v);
+Vec3 Vec3::v_normalization() const{
+    float len = Vec3::v_length();
     if(len == 0.0f) return Vec3(0,0,0);
-    Vec3 normalized_vec = Vec3(v.x/len, v.y/len, v.z/len);
+    Vec3 normalized_vec = Vec3(x/len, y/len, z/len);
     return normalized_vec;
 }
