@@ -1,2 +1,8 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.15)
 
+project(gamma)
+
+add_executable(${PROJECT_NAME} gamma)
+
+add_subdirectory(include)
+add_subdirectory(src)
