@@ -1,2 +1,2 @@
 # Physics-Engine
-a 2d physics engine for an game engine 
+a physics engine for an game engine 
